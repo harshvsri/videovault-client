@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useRef } from "react";
+import { API_URL } from "../utils/data";
 
 function Upload() {
   const [formData, setFormData] = useState({
@@ -28,7 +29,7 @@ function Upload() {
     data.append("description", formData.description);
 
     // Send the data to the server
-    const url = import.meta.env.VITE_API_URL + "/uploads/upload";
+    const url = API_URL + "/uploads/upload";
     const response = await fetch(url, {
       method: "POST",
       body: data,
