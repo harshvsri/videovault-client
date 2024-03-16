@@ -1,7 +1,8 @@
 async function authenticate(route, formData) {
   try {
     const API_URL = import.meta.env.VITE_API_URL;
-    const res = await fetch(`${API_URL}/${route}`, {
+    const url = API_URL + "/" + route;
+    const res = await fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
