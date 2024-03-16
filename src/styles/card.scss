@@ -1,0 +1,26 @@
+.card {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: black;
+
+  &-info {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: flex-start;
+    &-profile {
+      .pic {
+        font-size: 2rem;
+      }
+      margin-right: 1rem;
+      border-radius: 50%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
