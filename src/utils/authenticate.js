@@ -1,15 +1,7 @@
+import { API_URL } from "./data";
+
 async function authenticate(route, formData) {
-  if (!route) {
-    console.log("A route is required");
-  }
-
   try {
-    const API_URL = import.meta.env.VITE_API_URL;
-    if (!API_URL) {
-      console.error("API_URL is undefined");
-      return;
-    }
-
     const res = await fetch(`${API_URL}/${route}`, {
       method: "POST",
       headers: {
