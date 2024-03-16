@@ -1,8 +1,16 @@
 async function authenticate(route, formData) {
+  if (!route) {
+    console.log("A route is required");
+  }
+
   try {
     const API_URL = import.meta.env.VITE_API_URL;
-    const url = API_URL + "/" + route;
-    const res = await fetch(url, {
+    if (!API_URL) {
+      console.error("API_URL is undefined");
+      return;
+    }
+
+    const res = await fetch(`${API_URL}/${route}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
