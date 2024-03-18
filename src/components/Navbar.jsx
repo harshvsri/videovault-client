@@ -37,12 +37,6 @@ function NavBar() {
             <Link to="/upload">Upload</Link>
           </li>
           <li>
-            <a href="#">Subscriptions</a>
-          </li>
-          <li>
-            <a href="#">Your Channel</a>
-          </li>
-          <li>
             <Link to="/login" onClick={handleLogout}>
               LogOut
             </Link>

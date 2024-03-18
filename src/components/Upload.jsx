@@ -44,8 +44,12 @@ function Upload() {
   }
 
   return (
-    <form action="/upload" method="post" encType="multipart/form-data">
-      <input type="file" ref={inputVideo} name="video" accept="video/*" />
+    <form
+      className="upload-form"
+      action="/upload"
+      method="post"
+      encType="multipart/form-data"
+    >
       <input
         type="text"
         value={formData.title}
@@ -62,6 +66,9 @@ function Upload() {
           setFormData({ ...formData, description: e.target.value })
         }
       />
+      <h2>Upload Video</h2>
+      <input type="file" ref={inputVideo} name="video" accept="video/*" />
+      <h2>Upload Thumbnail</h2>
       <input type="file" ref={inputImage} name="thumbnail" accept="image/*" />
       <button type="submit" onClick={handleClick}>
         Submit

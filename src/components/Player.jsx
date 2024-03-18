@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { IoIosTime, IoIosCheckmarkCircle } from "react-icons/io";
 import Recommended from "./Recommended";
@@ -44,7 +44,9 @@ function Player() {
       </div>
       <div className="recommendation">
         {uploads.map((upload) => (
-          <Recommended key={upload} />
+          <Link className="link" to={`/watch/${upload}`} key={upload}>
+            <Recommended />
+          </Link>
         ))}
       </div>
     </div>

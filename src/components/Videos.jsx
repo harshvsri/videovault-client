@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import VideoCard from "./VideoCard";
 
 function Videos() {
@@ -6,7 +7,9 @@ function Videos() {
   return (
     <div className="videos">
       {uploads.map((upload) => (
-        <VideoCard key={upload} />
+        <Link className="link" to={`/watch/${upload}`} key={upload}>
+          <VideoCard />
+        </Link>
       ))}
     </div>
   );
