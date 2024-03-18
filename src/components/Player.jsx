@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { IoIosTime, IoIosCheckmarkCircle } from "react-icons/io";
 import Recommended from "./Recommended";
+import API_URL from "../utils/data";
 
 function Player() {
   const videoID = useParams().id;
@@ -11,7 +12,6 @@ function Player() {
 
   const [videoURL, setVideoURL] = useState(null);
   useEffect(() => {
-    const API_URL = import.meta.env.VITE_API_URL;
     fetch(`${API_URL}/uploads/${videoID}`)
       .then((response) => response.blob())
       .then((blob) => {
