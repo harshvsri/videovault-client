@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { IoIosTime, IoIosCheckmarkCircle } from "react-icons/io";
 import Recommended from "./Recommended";
-import API_URL from "../utils/data";
+import { API_URL } from "../utils/data";
 
 function Player() {
   const videoID = useParams().id;
