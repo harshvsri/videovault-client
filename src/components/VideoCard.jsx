@@ -1,8 +1,8 @@
+/* eslint-disable react/prop-types */
 import { CgProfile } from "react-icons/cg";
-import { IoIosCheckmarkCircle } from "react-icons/io";
-import { IoIosTime } from "react-icons/io";
+import { IoIosTime, IoIosCheckmarkCircle } from "react-icons/io";
 
-function VideoCard() {
+function VideoCard({ upload }) {
   return (
     <div className="card">
       <img src="/placeholder.png"></img>
@@ -11,7 +11,7 @@ function VideoCard() {
           <CgProfile className="pic" />
         </div>
         <div className="card-info-details">
-          <h5>Getting started with videovault</h5>
+          <h5>{upload.title}</h5>
           <h6>
             VideoVault.io <IoIosCheckmarkCircle />
           </h6>

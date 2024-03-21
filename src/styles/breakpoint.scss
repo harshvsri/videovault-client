@@ -1,3 +1,19 @@
+@media (max-width: 62.5rem) {
+  .player {
+    margin: 1rem 2rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    .curr {
+      grid-column: 1 / -1;
+    }
+
+    .recommendation {
+      display: none;
+    }
+  }
+}
+
 @media (max-width: 50rem) {
   .landing {
     h1 {

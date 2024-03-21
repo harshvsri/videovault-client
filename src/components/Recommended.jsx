@@ -1,5 +1,4 @@
-import { IoIosCheckmarkCircle } from "react-icons/io";
-import { IoIosTime } from "react-icons/io";
+import { IoIosTime, IoIosCheckmarkCircle } from "react-icons/io";
 
 function Recommended() {
   return (
