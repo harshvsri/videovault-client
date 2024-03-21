@@ -12,6 +12,7 @@ function Player() {
 
   const [videoURL, setVideoURL] = useState(null);
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetch(`${API_URL}/uploads/${videoID}`)
       .then((response) => response.blob())
       .then((blob) => {
