@@ -1,9 +1,8 @@
 {
-  "routes": [
-    {
-      "route": "/*",
-      "serve": "/index.html",
-      "statusCode": 200
-    }
-  ]
+  "navigationFallBack": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "*.{css,scss,js,png.gif,ico,jpg,jpeg,svg,woff,woff2,ttf,eot,json,xml,txt,md,htm,mp4,webm,ogg,mp3,ogg}"
+    ]
+  }
 }
